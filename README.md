@@ -2,8 +2,12 @@
 
 A library for stock trading and sample app using the library
 
-ValidateTor: Android library for fast and simple string validation.
 
+# Including in your project
+StockTrader is available in Jcenter so it is possible to get it as dependency,
+```gradle
+implementation 'com.bakikocak.stocktradersdk:stocktradersdk:1.0.0'
+```
 
 # Usage
 
