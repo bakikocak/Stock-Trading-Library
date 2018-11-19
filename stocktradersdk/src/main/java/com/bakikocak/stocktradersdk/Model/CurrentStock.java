@@ -25,32 +25,15 @@ public class CurrentStock {
         return symbol;
     }
 
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
-    }
-
     public Double getPrice() {
         return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
     }
 
     public Integer getSize() {
         return size;
     }
 
-    public void setSize(Integer size) {
-        this.size = size;
-    }
-
     public Float getTime() {
         return time;
     }
-
-    public void setTime(Float time) {
-        this.time = time;
-    }
-
 }
