@@ -6,9 +6,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5424e3f2-2577-479d-bd05-291ff3746301" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/stocktradersdk/src/main/java/com/bakikocak/stocktradersdk/StockTrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/stocktradersdk/src/main/java/com/bakikocak/stocktradersdk/StockTrader.java" afterDir="false" />
-    </list>
+    <list default="true" id="5424e3f2-2577-479d-bd05-291ff3746301" name="Default" comment="" />
     <ignored path="local.properties" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +32,8 @@
       <file leaf-file-name="StockTrader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stocktradersdk/src/main/java/com/bakikocak/stocktradersdk/StockTrader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+            <state relative-caret-position="435">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
             </state>
           </provider>
         </entry>
@@ -3764,7 +3762,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="BPN0218525003154" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
@@ -4063,8 +4061,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stocktradersdk/src/main/java/com/bakikocak/stocktradersdk/StockTrader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        <state relative-caret-position="435">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
