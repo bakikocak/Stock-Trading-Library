@@ -69,3 +69,4 @@ fastlane/readme.md
 app/libs/
 stocktradersdk/libs/
 stocktradersdk/src/main/res/drawable/
+.DS_Store
