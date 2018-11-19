@@ -40,7 +40,7 @@ public class StockTrader {
 
                             @Override
                             public void onNext(Company company) {
-                                Log.d(TAG, "onNext: " + company.getCompanyName());
+                                //Log.d(TAG, "onNext: " + company.getCompanyName());
                             }
 
                             @Override
@@ -75,7 +75,6 @@ public class StockTrader {
 
                             @Override
                             public void onNext(Company company) {
-                                Log.d(TAG, "onNext: " + company);
                                 mActivity.onCompanyDataRetrieved(company);
                             }
 
