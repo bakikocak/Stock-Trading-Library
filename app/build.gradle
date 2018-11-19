@@ -35,4 +35,7 @@ dependencies {
 
     // stocktradersdk is used as a module dependency
      implementation project(':stocktradersdk')
+
+    // stocktradersdk is also used as a gradle dependency
+    // implementation 'com.bakikocak.stocktradersdk:stocktradersdk:1.0.0'
 }

@@ -90,6 +90,10 @@ public class Company {
         return tags;
     }
 
+    public void setCurrentStock(CurrentStock currentStock) {
+        this.currentStock = currentStock;
+    }
+
     public CurrentStock getCurrentStock() {
         return currentStock;
     }

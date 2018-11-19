@@ -39,7 +39,7 @@ ext {
     espressoCoreVersion = "3.0.2"
 
     // Library Info
-    libVersionCode = 1
-    libVersionName = '1.0.0'
+    libVersionCode = 2
+    libVersionName = '1.0.1'
 
 }

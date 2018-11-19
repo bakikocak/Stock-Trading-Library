@@ -32,12 +32,12 @@ ext {
     artifact = 'stocktradersdk'
     publishedGroupId='com.bakikocak.stocktradersdk'
     libraryName = 'stocktradersdk'
-    libraryVersion='1.0.0'
+    libraryVersion='1.0.1'
     libraryDescription = 'An Android library for stock trading'
 
     PUBLISH_GROUP_ID = 'com.bakikocak.stocktradersdk'
     PUBLISH_ARTIFACT_ID = 'stocktradersdk'
-    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_VERSION = '1.0.1'
 
     siteUrl = 'https://github.com/bakikocak/Stock-Trading-Library'
     gitUrl = 'https://github.com/bakikocak/Stock-Trading-Library.git'
