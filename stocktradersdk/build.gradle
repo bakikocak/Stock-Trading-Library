@@ -32,12 +32,12 @@ ext {
     artifact = 'stocktradersdk'
     publishedGroupId='com.bakikocak.stocktradersdk'
     libraryName = 'stocktradersdk'
-    libraryVersion='1.0.1'
+    libraryVersion='1.0.2'
     libraryDescription = 'An Android library for stock trading'
 
     PUBLISH_GROUP_ID = 'com.bakikocak.stocktradersdk'
     PUBLISH_ARTIFACT_ID = 'stocktradersdk'
-    PUBLISH_VERSION = '1.0.1'
+    PUBLISH_VERSION = '1.0.2'
 
     siteUrl = 'https://github.com/bakikocak/Stock-Trading-Library'
     gitUrl = 'https://github.com/bakikocak/Stock-Trading-Library.git'
@@ -53,11 +53,15 @@ ext {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-    implementation 'com.google.code.gson:gson:2.8.5'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.ext.reactivexVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.rxjavaVersion"
+
+    implementation "android.arch.lifecycle:runtime:$rootProject.ext.lifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$rootProject.ext.lifecycleVersion"
 
     // Testing
     testImplementation "junit:junit:$rootProject.ext.junitVersion"

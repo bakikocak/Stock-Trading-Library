@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity implements StockTraderDataCo
 
         // Initialize StockTrader library
         stockTrader = new StockTrader(this);
+        // Add Lifecycle Observer
+        getLifecycle().addObserver(StockTrader.getInstance());
+
     }
 
     private void setUpUiWidgets() {
@@ -105,5 +108,12 @@ public class MainActivity extends AppCompatActivity implements StockTraderDataCo
         ceoTextView.setText("");
         valueTextView.setText("");
         infoTextView.setText("");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Remove Lifecycle Observer
+        getLifecycle().removeObserver(StockTrader.getInstance());
     }
 }

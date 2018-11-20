@@ -1,5 +1,8 @@
 package com.bakikocak.stocktradersdk;
 
+import android.arch.lifecycle.Lifecycle;
+import android.arch.lifecycle.LifecycleObserver;
+import android.arch.lifecycle.OnLifecycleEvent;
 import android.util.Log;
 
 import com.bakikocak.stocktradersdk.Api.ApiClient;
@@ -13,15 +16,21 @@ import io.reactivex.observables.ConnectableObservable;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 
-public class StockTrader {
+public class StockTrader implements LifecycleObserver {
 
-    public static final String TAG = StockTrader.class.getSimpleName();
+    private static final String TAG = StockTrader.class.getSimpleName();
+    private static StockTrader instance;
 
     private StockTraderDataContract.View mActivity;
     private CompositeDisposable disposable = new CompositeDisposable();
 
     public StockTrader(StockTraderDataContract.View activity) {
         mActivity = activity;
+        instance = this;
+    }
+
+    public static StockTrader getInstance() {
+        return instance;
     }
 
     public void getCompanyData(final String companySymbol) {
@@ -93,6 +102,41 @@ public class StockTrader {
         // connect to start emission
         companyObservable.connect();
 
+    }
+    /**
+     * Since we need to dispose the disposable onDestroy of the activity for safety reasons,
+     * Lifecycle Arch Components are integrated and listening to onDestroy method of the activity below
+     */
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
+    public void init() {
+        Log.d(TAG, "init: called onCreate() of Activity");
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_START)
+    public void LibOnStart() {
+        Log.d(TAG, "LibOnStart: called onStart() of Activity");
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
+    public void LibOnStop() {
+        Log.d(TAG, "LibOnStop: called onStop() of Activity");
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    public void LibOnResume() {
+        Log.d(TAG, "LibOnResume: called onResume() of Activity");
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+    public void LibOnPause() {
+        Log.d(TAG, "LibOnPause: called onPause() of Activity");
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+    public void cleanup() {
+        Log.d(TAG, "cleanup: called onDestroy() of Activity");
+        disposable.dispose();
     }
 }
 
