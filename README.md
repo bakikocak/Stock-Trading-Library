@@ -6,7 +6,7 @@ A library for stock trading and sample app using the library
 # Including in your project
 StockTrader is available in Jcenter so it is possible to get it as dependency:
 ```gradle
-implementation 'com.bakikocak.stocktradersdk:stocktradersdk:1.0.1'
+implementation 'com.bakikocak.stocktradersdk:stocktradersdk:1.0.2'
 ```
 
 # Usage
