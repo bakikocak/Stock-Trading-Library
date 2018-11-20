@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements StockTraderDataCo
     private Button findButton;
     private StockTrader stockTrader;
     private TextView infoTextView, nameTextView, websiteTextView, ceoTextView, valueTextView;
+    private String companySymbol;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +47,11 @@ public class MainActivity extends AppCompatActivity implements StockTraderDataCo
             public void onClick(View view) {
                 clearTextFields();
 
-                String companySymbol = companyEditText.getText().toString();
+                companySymbol = companyEditText.getText().toString();
                 if (Utils.isEmpty(companySymbol)) {
                     showErrorMessage(getString(R.string.symbol_empty_error));
                 } else {
+                    companyEditText.setText("");
                     infoTextView.setText(getString(R.string.searching_text));
                     // Send data request for given company symbol
                     stockTrader.getCompanyData(companySymbol);
@@ -89,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements StockTraderDataCo
         }
 
         if (error.getLocalizedMessage().contains("404")) {
-            showErrorMessage(getString(R.string.company_not_found_text));
+            showErrorMessage(getString(R.string.company_not_found_text, companySymbol));
         }
     }
 

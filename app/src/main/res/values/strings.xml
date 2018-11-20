@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">SampleApp</string>
     <string name="company_symbol_text">Enter company symbol..</string>
-    <string name="find_button_text">Find</string>
+    <string name="search_button_text">Search</string>
     <string name="symbol_empty_error">Company symbol cannot be empty</string>
     <string name="error_network">No connection available</string>
     <string name="company_name_text">Company name: %1$s</string>
     <string name="website_text">Website: %1$s</string>
     <string name="ceo_text">CEO: %1$s</string>
     <string name="value_text">Current value: %1$s</string>
-    <string name="company_not_found_text">Company symbol not found</string>
+    <string name="company_not_found_text">No stock found for %1$s</string>
     <string name="no_data_text">No data for this field</string>
     <string name="searching_text">Searching for the company..</string>
 
